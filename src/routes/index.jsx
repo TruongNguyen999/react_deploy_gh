@@ -2,17 +2,15 @@ import Home from "../pages/home";
 import Move from "../pages/move";
 import NotFound from '../pages/notFound';
 
-const urlPath = 'react_deploy_gh'
-
 // private
 export const routes = [
     {
-        path: `${urlPath}/`,
+        path: `${process.env.PUBLIC_URL}/`,
         key: 'home',
-        component: () => <Move />,
+        component: () => <Home />,
     },
     {
-        path: `${urlPath}/move-task`,
+        path: `${process.env.PUBLIC_URL}/move-task`,
         key: 'move',
         component: () => <Move />,
     },
