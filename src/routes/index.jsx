@@ -3,7 +3,7 @@ import Move from "../pages/move";
 import NotFound from '../pages/notFound';
 
 let pathENV = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_URL_ENDPOINT_DEV : process.env.REACT_APP_URL_ENDPOINT_PRO
-console.log('truong log', process.env);
+// console.log('truong log', process.env);
 // private
 export const routes = [
     {
