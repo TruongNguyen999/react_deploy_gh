@@ -25,7 +25,6 @@ const App = () => {
     return <Routes>{result}</Routes>
   }
 
-  console.log('Truong log');
 
   return (
     <React.Fragment>
