@@ -1,7 +1,7 @@
 // cli
 import React from "react";
 import {
-  BrowserRouter as Brouter,
+  HashRouter as Brouter,
   Routes,
   Route,
 } from 'react-router-dom';
