@@ -5,17 +5,17 @@ import NotFound from '../pages/notFound';
 // private
 export const routes = [
     {
-        path: `/`,
+        path: `${process.env.REACT_APP_URL_ENDPOINT_DEV}/`,
         key: 'home',
         component: () => <Home />,
     },
     {
-        path: `/move-task`,
+        path: `/${process.env.REACT_APP_URL_ENDPOINT_DEV}/move-task`,
         key: 'move',
         component: () => <Move />,
     },
     {
-        path: '*',
+        path: `*`,
         key: 'notFound',
         component: () => <NotFound />,
     },

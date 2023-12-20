@@ -25,7 +25,6 @@ const App = () => {
     return <Routes>{result}</Routes>
   }
 
-
   return (
     <React.Fragment>
       <GlobalStyle />
