@@ -5,12 +5,12 @@ import NotFound from '../pages/notFound';
 // private
 export const routes = [
     {
-        path: `${process.env.PUBLIC_URL}/`,
+        path: `/`,
         key: 'home',
         component: () => <Home />,
     },
     {
-        path: `${process.env.PUBLIC_URL}/move-task`,
+        path: `/move-task`,
         key: 'move',
         component: () => <Move />,
     },
