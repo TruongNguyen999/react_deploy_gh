@@ -28,7 +28,7 @@ const App = () => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Brouter basename={`/`}>
+      <Brouter>
         {onRenderRoutes(routes)}
       </Brouter>
     </React.Fragment>
