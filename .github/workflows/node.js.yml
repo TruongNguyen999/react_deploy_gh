@@ -33,16 +33,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          ACCESS_TOKEN: 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
-          BRANCH: gh-pages
-          FOLDER: build
-
       - name: Deploy with gh-pages
         run: |
-          git remote set-url origin https://git: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@github.com/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.git
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
