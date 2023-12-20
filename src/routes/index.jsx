@@ -2,20 +2,22 @@ import Home from "../pages/home";
 import Move from "../pages/move";
 import NotFound from '../pages/notFound';
 
+let pathENV = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_URL_ENDPOINT_DEV : process.env.REACT_APP_URL_ENDPOINT_PRO
+
 // private
 export const routes = [
     {
-        path: `${process.env.REACT_APP_URL_ENDPOINT_DEV}/`,
+        path: `/${pathENV}`,
         key: 'home',
         component: () => <Home />,
     },
     {
-        path: `/${process.env.REACT_APP_URL_ENDPOINT_DEV}/move-task`,
+        path: `/${pathENV}/move-task`,
         key: 'move',
         component: () => <Move />,
     },
     {
-        path: `*`,
+        path: `/${pathENV}/*`,
         key: 'notFound',
         component: () => <NotFound />,
     },
