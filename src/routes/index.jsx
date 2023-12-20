@@ -9,7 +9,7 @@ export const routes = [
     {
         path: `${urlPath}/`,
         key: 'home',
-        component: () => <Home />,
+        component: () => <Move />,
     },
     {
         path: `${urlPath}/move-task`,
