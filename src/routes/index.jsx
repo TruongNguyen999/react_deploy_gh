@@ -1,5 +1,6 @@
 import Home from "../pages/home";
 import Move from "../pages/move";
+import Api from "../pages/api";
 import NotFound from '../pages/notFound';
 
 let pathENV = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_URL_ENDPOINT_DEV : process.env.REACT_APP_URL_ENDPOINT_PRO
@@ -15,6 +16,11 @@ export const routes = [
         path: `/${pathENV}/move-task`,
         key: 'move',
         component: () => <Move />,
+    },
+    {
+        path: `/${pathENV}/api`,
+        key: 'api',
+        component: () => <Api />,
     },
     {
         path: `/${pathENV}/*`,
